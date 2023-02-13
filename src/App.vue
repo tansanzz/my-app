@@ -1,14 +1,16 @@
 <template>
-  <router-view/>
+  <div id="app">
+    <router-view/>
+    <dialog-wrapper/>
+  </div>
 </template>
 
 <script>
-import HomeComponent from '@/pages/HomeComponent.vue';
-
+import { DialogWrapper } from 'vue3-promise-dialog'
 export default {
   name: 'App',
   components: {
-    HomeComponent
+    DialogWrapper
   }
 }
 </script>

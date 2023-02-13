@@ -8,13 +8,9 @@
 <script>
 import { showMessageBox } from "@/commons/globalMessage";
 export default {
-  beforeRouteLeave: function(to, from, next) {
-        console.log("In beforeRouteLeave of AnotherComponent")
-        showMessageBox().then((result) => {
-          if(result) {
-            next();
-          }
-        })
+  beforeRouteLeave: async function(to, from, next) {
+        const messageBox = await showMessageBox();
+        console.log("hello");
     }
 }
 </script>
