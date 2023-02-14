@@ -3,6 +3,8 @@ import App from './App.vue'
 
 const app = createApp(App)
 
+import "@/commons/prototype";
+
 import { pluginInstall } from "@/commons/globalPlugin";
 pluginInstall(app);
 
