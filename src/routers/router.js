@@ -11,6 +11,12 @@ const routes = [{
         name: 'another-route',
         path: '/another',
         component: () => import("@/pages/AnotherComponent.vue") 
+    }, {
+        path: '/:pathMatch(.*)*',
+        component: () => import("@/pages/404.vue"),
+        meta: {
+            anonymous: true,
+        }
     }];
 
     const router = createRouter({
