@@ -1,18 +1,22 @@
 <template>
-  <div>
-            <p>This is my home route</p>
-            <router-link :to="{name: 'another-route'}">To Another Route</router-link>
-        </div>
+    <layout>
+        <template #menuLeft>
+            <div>Home</div>
+        </template>
+    </layout>
 </template>
 
 <script>
+import Layout from '@/layout/Layout';
 export default {
-  created() {
-    debugger
-  }
-}
+    components: { Layout },
+    created() {},
+    data() {
+        return {
+            show: false,
+        };
+    },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
