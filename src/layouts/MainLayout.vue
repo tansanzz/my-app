@@ -1,7 +1,6 @@
 <template>
 <div>
   <left-menu/>
-    <h1>Hello</h1>
 </div>
   
 </template>

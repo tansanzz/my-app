@@ -2,6 +2,7 @@
   <div id="app">
     <router-view/>
     <dialog-wrapper/>
+    <button @click="$toast.success('message')">show</button>
   </div>
 </template>
 
@@ -11,6 +12,9 @@ export default {
   name: 'App',
   components: {
     DialogWrapper
+  },
+  created() {
+    
   }
 }
 </script>
