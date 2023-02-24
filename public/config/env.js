@@ -1,3 +1,3 @@
 window._apis = {
-    Auth: "Hello"
-}
+    Backend: 'http://localhost:3002',
+};
