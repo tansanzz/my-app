@@ -36,7 +36,7 @@ const mountElement = (component, { props, children, element, app } = {}) => {
 const service = () => {
     return {
         show(modal, options = {}) {
-            return mountElement(modal, {
+            return mountElement(TsModal, {
                 props: { ...options },
             });
         },
