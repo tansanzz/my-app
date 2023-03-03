@@ -1,14 +1,12 @@
 <template>
-    <div>Popup 1: {{ params.message }}</div>
+    <div>Popup 2: {{ message }}</div>
 </template>
 
 <script>
 export default {
     props: {
         message: String,
-        params: Object,
     },
-    methods: {},
 };
 </script>
 

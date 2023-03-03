@@ -8,9 +8,6 @@ import '@/commons/prototype';
 import { pluginInstall } from '@/commons/globalPlugin';
 pluginInstall(app);
 
-import { registerModal } from '@/commons/registerModal';
-registerModal(app);
-
 import router from '@/routers/router';
 app.use(router);
 

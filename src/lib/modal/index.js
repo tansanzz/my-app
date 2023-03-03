@@ -1,5 +1,5 @@
 import { render, h } from 'vue';
-import TsModal from './TsModal.vue';
+import modal from './TsModal.vue';
 
 const removeElement = (el) => {
     if (typeof el.remove !== 'undefined') {
@@ -15,7 +15,7 @@ const mountElement = (component, { props, children, element, app } = {}) => {
     let el = element ? element : createElement();
 
     let vNode = h(component, props, children);
-    debugger
+
     if (app && app._context) {
         vNode.appContext = app._context;
     }
@@ -35,9 +35,9 @@ const mountElement = (component, { props, children, element, app } = {}) => {
 
 const service = () => {
     return {
-        show(modal, options = {}) {
-            return mountElement(TsModal, {
-                props: { ...options },
+        show(componentName, params = {}) {
+            return mountElement(modal, {
+                props: { componentName, params },
             });
         },
         clear() {},
